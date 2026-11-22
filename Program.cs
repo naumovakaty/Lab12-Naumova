@@ -1,4 +1,6 @@
-﻿Console.WriteLine("Самостоятельная работа");
+﻿using System.Globalization;
+
+Console.WriteLine("Самостоятельная работа");
 Console.WriteLine("Вариант1");
 //Задача 1
 for (int i = 1; i <= 8; i++){
@@ -66,3 +68,36 @@ while (true)
 }
 Console.WriteLine($"Введено оценок : {Count1}");
 Console.WriteLine($"Сумма всех оценок: {Sum} ");
+//Вариант 2
+//Задача № 1
+for (int i = 1; i <= 10; i++)
+{
+    Console.WriteLine($"Раунд № {i}");
+}
+
+
+//Задача 2
+int sum1 = 0;
+int k = 1;
+while (k <= 20)
+{
+    if (k % 2 == 0)
+    {
+        sum1 += k;
+    }
+    k++;
+}
+Console.WriteLine($"Сумма чётных чисел от 1 до 20: {sum1}");
+Console.WriteLine();
+
+
+//Задача 3
+string nickname = "NeonBlade";
+int count11 = 0;
+foreach (char v in nickname)
+{
+    if (v == 'e' || v == 'E') {
+        count11++;
+    }
+}
+Console.WriteLine($"Количество букв 'e' равно {count11}");
