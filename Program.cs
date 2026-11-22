@@ -101,3 +101,46 @@ foreach (char v in nickname)
     }
 }
 Console.WriteLine($"Количество букв 'e' равно {count11}");
+
+Console.WriteLine();
+//задача 4
+int countN3 = 0;
+for (n = 1; n <= 40; n++)
+{
+    if (n % 3 == 0)
+    {
+        countN3++;
+    }
+}
+Console.WriteLine($"Чисел кратных 3 от 1до 40 всего {countN3}");
+
+
+Console.WriteLine();
+//Задача 5
+//int count = 0;
+int maxResult = int.MinValue;
+int input;
+Console.Write("Введите результаты участников (для выхода введите -1)");
+while (true)
+{
+    Console.Write("Результаты: ");
+    input = Convert.ToInt32(Console.ReadLine());
+    if (input == -1)
+    {
+        break;
+    }
+    count++;
+    if (input > maxResult)
+    {
+        maxResult = input;
+    }
+}
+Console.WriteLine($"Количество введенных результатов: {count} ");
+if (count > 0)
+{
+    Console.WriteLine($"Максимальный результат: {maxResult}");
+}
+else
+{
+    Console.WriteLine($"Результаты не были введены");
+}
