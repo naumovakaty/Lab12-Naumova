@@ -103,11 +103,12 @@ foreach (char v in nickname)
 Console.WriteLine($"Количество букв 'e' равно {count11}");
 
 Console.WriteLine();
+
 //задача 4
 int countN3 = 0;
-for (n = 1; n <= 40; n++)
+for (int i = 1; i <= 40; i++)
 {
-    if (n % 3 == 0)
+    if (i % 3 == 0)
     {
         countN3++;
     }
@@ -143,4 +144,79 @@ if (count > 0)
 else
 {
     Console.WriteLine($"Результаты не были введены");
+}
+
+
+Console.WriteLine();
+// Вариант 3
+// Задача 1
+for(int i = 1; i <= 14; i++)
+{
+    Console.WriteLine($"День {i}");
+}
+
+
+Console.WriteLine();
+//Задача 2
+int summa = 0;
+int n = 1;
+while (n <= 25)
+{
+    if (n % 2 != 0)
+    {
+        summa += n;
+    }
+    n++;
+}
+Console.WriteLine($"Сумма нечётных чисел {summa}");
+
+
+//Задача № 3
+string text = "TEMPERATURE";
+int t_count = 0;
+foreach (char letter in text)
+{
+    if (letter == 'T')
+    {
+        t_count++;
+    }
+}
+Console.WriteLine($"Буква встретилась {t_count} раз");
+
+//Задача 4
+Console.WriteLine();
+int count7 = 0;
+for (int i = 1; i <= 50; i++)
+{
+    if (i % 7 == 0)
+    {
+        count7++;
+    }
+}
+Console.WriteLine($"Количество чисел, кратных 7 {count7} ");
+
+Console.WriteLine();
+//Задача 5
+int count_t = 0;
+double sum_t = 0;
+while (true)
+{
+    Console.WriteLine("Введите температуру (для входа введите 100)");
+    double temp = Convert.ToDouble(Console.ReadLine());
+    if (temp == 100)
+    {
+        break;
+    }
+    sum_t += temp;
+    count_t++;
+}
+if (count_t > 0)
+{
+    double average = sum_t / count_t;
+    Console.WriteLine($"Количество показаний: {count_t}");
+    Console.WriteLine($"Средняя температура {average:F2}");
+}
+else
+{
+    Console.WriteLine("Показаний нет");
 }
